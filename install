@@ -1,0 +1,21 @@
+#! /bin/bash
+
+# First install erlang
+sudo yum install gcc ncurses-devel openssl-devel
+wget http://www.erlang.org/download/otp_src_18.3.tar.gz
+tar -xzvf otp_src_18.3.tar.gz
+cd otp_src_18.3
+./configure
+make
+sudo make install
+
+# Next install elixir
+wget https://github.com/elixir-lang/elixir/releases/download/v1.2.4/Precompiled.zip
+sudo mkdir /opt/elixir
+sudo mv Precompiled.zip /opt/elixir/
+cd /opt/elixir/
+sudo unzip Precompiled.zip
+sudo ln -s -f /opt/elixir/bin/iex /usr/local/bin/iex
+sudo ln -s -f /opt/elixir/bin/elixir /usr/local/bin/elixir
+sudo ln -s -f /opt/elixir/bin/elixirc /usr/local/bin/elixirc
+sudo ln -s -f /opt/elixir/bin/mix /usr/local/bin/mix
