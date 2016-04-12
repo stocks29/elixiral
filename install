@@ -2,7 +2,7 @@
 
 # First install erlang
 cd
-sudo yum install gcc ncurses-devel openssl-devel
+sudo yum install gcc ncurses-devel openssl-devel wget
 wget http://www.erlang.org/download/otp_src_18.3.tar.gz
 tar -xzvf otp_src_18.3.tar.gz
 cd otp_src_18.3
